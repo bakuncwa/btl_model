@@ -3,7 +3,7 @@
 **Data Set:** <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews">Sephora Products and Skincare Reviews</a>
   
 **Objective:**  
-Analyzed the impact of key ingredients in Product P442990 (REN Clean Skincare's Clean Screen Mineral SPF 30 Mattifying Face Sunscreen) during the cold months (January-April) to determine their role in hydration, protection, and skin barrier reinforcement. This study examines the formulation, standard ingredient concentrations, and the effects of each component on winter skincare needs.
+Low Performing Product in Sephora Dataset Product Recommendation Model is a machine learning solution developed for the Between the Lines: Machine Learning Study Jam event on April 4, 2025. The model predicts customer purchasing behavior based on ingredient concentration matching with key chemical ingredients in low-performing sales revenue Product P442990 (REN Clean Skincare's Clean Screen Mineral SPF 30 Mattifying Face Sunscreen) and seasonal skincare needs.
 
 **Key Insights:**  
 Cold weather leads to increased transepidermal water loss (TEWL), requiring enhanced hydration and occlusive agents. Product P442990’s formulation integrates **emollients, humectants, antioxidants, and protective agents**, ensuring optimal skin protection during low temperatures and dry conditions.
@@ -36,9 +36,9 @@ Cold weather leads to increased transepidermal water loss (TEWL), requiring enha
    - Support skin repair and minimize long-term damage from seasonal changes.  
 
 ### **Model-Based Analysis for Ingredient Optimization**  
-Utilizing **CatBoostClassifier**, the model predicts the likelihood of customer preferences based on ingredient concentrations in P442990. The model classifies customer data into two categories:
-- **1:** Higher-than-median ingredient concentration match, indicating increased purchase likelihood.
-- **0:** Lower-than-median ingredient concentration match, indicating reduced purchase likelihood.
+Utilizing **CatBoostClassifier**, the model predicts the likelihood of customer preferences based on ingredient concentrations in P442990 (identified as the low-performing sales revenue) and other products during cold months (January-April). The model classifies customer data into two categories:
+- **1:** Higher-than-median ingredient concentration match, indicating increased purchase likelihood (above calculated median concentration match of 0.075).
+- **0:** Lower-than-median ingredient concentration match, indicating reduced purchase likelihood (below calculated median concentration match of 0.075).
 
 #### **Classification Report:**  
 - **Accuracy:** 0.9993  
