@@ -1,6 +1,6 @@
 **Low Performing Product in Sephora Dataset Product Recommendation Model**
 
-**Data Set:** <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews">Sephora Products and Skincare Reviews</a>
+**Data Set:** <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews" target="_blank">Sephora Products and Skincare Reviews</a>
   
 **Objective:**  
 Low Performing Product in Sephora Dataset Product Recommendation Model is a machine learning solution developed for the Between the Lines: Machine Learning Study Jam event on April 4, 2025. The model predicts customer purchasing behavior based on ingredient concentration matching with key chemical ingredients in low-performing sales revenue Product P442990 (REN Clean Skincare's Clean Screen Mineral SPF 30 Mattifying Face Sunscreen) and seasonal skincare needs.
