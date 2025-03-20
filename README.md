@@ -1,25 +1,61 @@
-_Seerummender, developed for Between the Lines: Machine Learning Study Jam (April 4, 2025, Friday, 11:30 AM to 2:30 PM) - Association of Information Management Benilde._
+**Low Performing Product in Sephora Dataset Product Recommendation Model**
 
-**Case Study: Targeted Marketing for Low-Performing Serum Product (SK4382)**
-
+**Data Set:** <a href="https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews">Sephora Products and Skincare Reviews</a>
+  
 **Objective:**  
-Developed a CatBoostClassifier model to predict low-performing serum purchases (SK4382) based on customer behavior and weather conditions. The model classifies customers into two groups:  
-- **1:** Customers likely to purchase SK4382 during low humidity (≤ 50.9%).  
-- **0:** Customers buying during high humidity.
-
-The model achieved high performance with 99.89% accuracy, 99.88% F1 score, 99.76% precision, and 100% recall on 20,000 samples.
+Analyzed the impact of key ingredients in Product P442990 (REN Clean Skincare's Clean Screen Mineral SPF 30 Mattifying Face Sunscreen) during the cold months (January-April) to determine their role in hydration, protection, and skin barrier reinforcement. This study examines the formulation, standard ingredient concentrations, and the effects of each component on winter skincare needs.
 
 **Key Insights:**  
-Integrated real-time weather data (temperature, humidity, wind speed) with historical purchase data. Found a **moderate negative correlation (-0.31)** between humidity and serum sales, indicating lower sales in higher humidity.
+Cold weather leads to increased transepidermal water loss (TEWL), requiring enhanced hydration and occlusive agents. Product P442990’s formulation integrates **emollients, humectants, antioxidants, and protective agents**, ensuring optimal skin protection during low temperatures and dry conditions.
 
-**Visualization & Analysis:**  
-- **Revenue Trends:** Monthly comparison of SK4382 vs. all other product sales from 2024-2025 (bar graph + trend line).
-- **Weather Impact:** Visualized temperature trends and a correlation heatmap between weather conditions and serum sales.
-- **Complementary Products:** Analyzed sales of complementary items like **ANTIAGING** products bought alongside SK4382.
+### **Ingredient Analysis & Benefits**
 
-**Marketing Strategy:**  
-Designed a targeted marketing model to identify high-probability serum buyers using demographics and weather data. Optimized ad placements based on peak purchasing periods and weather conditions, driving higher conversion rates in beauty-focused social media campaigns.
+1. **Humectants (e.g., Glycerin, Hyaluronic Acid, Panthenol)**  
+   - Draw moisture into the skin, reducing dryness and flakiness.  
+   - Maintain hydration levels by attracting water molecules from the environment and deeper skin layers.  
+   - Reinforce the natural moisture barrier, preventing excessive water loss.
 
-**Conclusion:**  
-By combining weather data and customer behavior, this project optimized targeted marketing and provided actionable insights for improving sales and ad spend efficiency.
+2. **Emollients (e.g., Squalane, Ceramides, Shea Butter)**  
+   - Provide a soft, smooth texture to the skin by filling in micro-cracks.  
+   - Restore the lipid barrier, ensuring long-lasting hydration.  
+   - Help prevent irritation caused by cold-induced skin sensitivity.  
+
+3. **Occlusive Agents (e.g., Dimethicone, Petrolatum, Beeswax)**  
+   - Form a protective seal over the skin’s surface, preventing moisture loss.  
+   - Shield the skin from external environmental stressors like wind and low humidity.  
+   - Enhance the longevity of humectant and emollient action.  
+
+4. **Antioxidants (e.g., Vitamin E, Green Tea Extract, Niacinamide)**  
+   - Combat oxidative stress and inflammation exacerbated by harsh weather conditions.  
+   - Strengthen skin resilience and repair damage caused by environmental aggressors.  
+   - Enhance the overall effectiveness of moisturization by reducing free radical damage.  
+
+5. **UV & Pollution Protectants (e.g., Zinc Oxide, Titanium Dioxide, Licorice Root Extract)**  
+   - Provide an added layer of protection against UV exposure, which remains a risk in winter months.  
+   - Reduce hyperpigmentation and irritation caused by cold-induced dryness.  
+   - Support skin repair and minimize long-term damage from seasonal changes.  
+
+### **Model-Based Analysis for Ingredient Optimization**  
+Utilizing **CatBoostClassifier**, the model predicts the likelihood of customer preferences based on ingredient concentrations in P442990. The model classifies customer data into two categories:
+- **1:** Higher-than-median ingredient concentration match, indicating increased purchase likelihood.
+- **0:** Lower-than-median ingredient concentration match, indicating reduced purchase likelihood.
+
+#### **Classification Report:**  
+- **Accuracy:** 0.9993  
+- **F1 Score:** 0.9995  
+- **Precision:** 0.9989  
+- **Recall:** 1.0000  
+
+| Category | Precision | Recall | F1-Score | Support |
+|----------|------------|---------|-----------|----------|
+| 0 (Low Match) | 1.00 | 1.00 | 1.00 | 61,020 |
+| 1 (High Match) | 1.00 | 1.00 | 1.00 | 135,444 |
+
+- **Correlation between cold-weather preferences and P442990’s ingredient concentration:** **0.2826**  
+
+### **Key Takeaways from Model Analysis:**  
+- Customers with preferences for **higher humectant and occlusive agent concentrations** are more likely to purchase P442990 during the winter months.
+- The model confirms that optimizing ingredient ratios in line with **cold-weather skincare needs** leads to better customer targeting and improved formulation effectiveness.
+- The high classification accuracy and recall demonstrate a strong predictive capability for matching ingredient concentration preferences with winter skincare needs.
+
 
