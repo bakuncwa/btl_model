@@ -49,8 +49,7 @@ Low Performing Product in Sephora Dataset Product Recommendation Model is a mach
   * Data Processing: `pandas`, `numpy`
   * Visualization: `matplotlib`, `seaborn`
   * Modeling: `catboost`, `sklearn`
-* **Development Tools:** Jupyter Notebook, Google Colab
-* **Deployment & Sharing:** Kaggle, LinkedIn, Study Jam platform
+* **Development Tools:** Jupyter Notebook, Python, Flask (for API)
 
 ---
 
