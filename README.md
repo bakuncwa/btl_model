@@ -42,14 +42,14 @@ Low Performing Product in Sephora Dataset Product Recommendation Model is a mach
 
 ## ⚙️ Tech Stack
 
-* **Programming Language:** Python 3.10
-* **ML Framework:** CatBoostClassifier
-* **Libraries:**
-
-  * Data Processing: `pandas`, `numpy`
-  * Visualization: `matplotlib`, `seaborn`
-  * Modeling: `catboost`, `sklearn`
-* **Development Tools:** Jupyter Notebook, Python, Flask (for API)
+| Category                     | Tools / Libraries                                      |
+|-------------------------------|-------------------------------------------------------|
+| **Programming Language**      | Python 3.10                                          |
+| **ML Framework**              | CatBoostClassifier                                   |
+| **Data Processing**           | pandas, numpy, Apache Spark                           |
+| **Visualization**             | matplotlib, seaborn                                  |
+| **Modeling**                  | catboost, scikit-learn                                |
+| **Development Tools**         | Jupyter Notebook, Python, Flask (for API)           |
 
 ---
 
