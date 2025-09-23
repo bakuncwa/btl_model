@@ -3,6 +3,7 @@
 **Dataset:** [Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews)
 
 **Event:** Between the Lines: Machine Learning Study Jam – April 4, 2025
+
 **Developed by:** Gabrielle Ysabel Almirol, Chief Technology Officer, Association of Information Management Benilde
 
 ---
