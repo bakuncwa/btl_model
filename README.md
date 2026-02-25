@@ -1,4 +1,4 @@
-# 🧪 Low Performing Product in Sephora Dataset Product Recommendation Model
+# Low Performing Product in Sephora Dataset Product Recommendation Model
 
 **Dataset:** [Sephora Products and Skincare Reviews](https://www.kaggle.com/datasets/nadyinky/sephora-products-and-skincare-reviews)
 
@@ -8,40 +8,13 @@
 
 ---
 
-## 🧠 Project Description
+## Project Description
 
 Low Performing Product in Sephora Dataset Product Recommendation Model is a machine learning solution developed for the **Between the Lines: Machine Learning Study Jam**. The model predicts customer purchasing behavior based on **ingredient concentration matching** with key chemical ingredients in **low-performing sales revenue product P442990** (REN Clean Skincare's *Clean Screen Mineral SPF 30 Mattifying Face Sunscreen*) and **seasonal skincare needs**.
 
 ---
 
-## 💼 Roles & Responsibilities
-
-* **Spearheaded** a predictive recommendation model using `CatBoostClassifier` to classify customers based on key ingredient concentration matching by identifying low-performing sales revenue product **P442990** and other products during cold months (**January–April**).
-
-  * Target labels: `1` (above median concentration match of `0.075`) and `0` (below).
-  * Achieved:
-
-    * **99.93% Accuracy**
-    * **99.95% F1 Score**
-    * **99.89% Precision**
-    * **100% Recall**
-    * Trained on over **8k products** and **1 million reviews**.
-* **Refined feature engineering** integrating:
-
-  * Seasonal skincare trends
-  * Customer purchase history
-  * Chemical ingredient composition
-    Optimized product formulation strategies and uncovered a **moderate correlation (0.2826)** between ingredient concentration and cold-weather skincare preferences (2019–2023).
-* **Designed visual analytics tools** to examine:
-
-  * Ingredient effectiveness
-  * Customer segmentation
-  * Demand fluctuations
-    Provided **actionable insights** for targeted marketing and product positioning in **winter skincare campaigns**.
-
----
-
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Category                     | Tools / Libraries                                      |
 |-------------------------------|-------------------------------------------------------|
@@ -54,7 +27,7 @@ Low Performing Product in Sephora Dataset Product Recommendation Model is a mach
 
 ---
 
-## 🧬 Ingredient Analysis & Benefits
+## Ingredient Analysis & Benefits
 
 ### 1. **Humectants** (e.g., Glycerin, Hyaluronic Acid, Panthenol)
 
@@ -88,7 +61,7 @@ Low Performing Product in Sephora Dataset Product Recommendation Model is a mach
 
 ---
 
-## 🤖 Model-Based Ingredient Optimization
+## Model-Based Ingredient Optimization
 
 Utilizing `CatBoostClassifier`, the model predicts customer preference likelihood using ingredient concentrations in **P442990** and similar products during **cold months (Jan–Apr)**.
 
@@ -97,7 +70,7 @@ Utilizing `CatBoostClassifier`, the model predicts customer preference likelihoo
 | `1`   | Higher-than-median concentration match (> 0.075) |
 | `0`   | Lower-than-median concentration match (≤ 0.075)  |
 
-### 📊 Classification Report
+### Classification Report
 
 | Category       | Precision | Recall | F1-Score | Support |
 | -------------- | --------- | ------ | -------- | ------- |
@@ -108,12 +81,39 @@ Utilizing `CatBoostClassifier`, the model predicts customer preference likelihoo
 
 ---
 
-## 🎯 Key Takeaways
+## Key Takeaways
 
 * Cold-weather buyers prefer **higher concentrations of humectants and occlusives**
 * Ingredient optimization according to **seasonal skincare needs** increases product relevance and sales potential
 * High accuracy and recall affirm the model's effectiveness in aligning product formulation with consumer behavior
 
+---
+
+## Roles & Responsibilities
+
+* **Spearheaded** a predictive recommendation model using `CatBoostClassifier` to classify customers based on key ingredient concentration matching by identifying low-performing sales revenue product **P442990** and other products during cold months (**January–April**).
+
+  * Target labels: `1` (above median concentration match of `0.075`) and `0` (below).
+  * Achieved:
+
+    * **99.93% Accuracy**
+    * **99.95% F1 Score**
+    * **99.89% Precision**
+    * **100% Recall**
+    * Trained on over **8k products** and **1 million reviews**.
+* **Refined feature engineering** integrating:
+
+  * Seasonal skincare trends
+  * Customer purchase history
+  * Chemical ingredient composition
+    Optimized product formulation strategies and uncovered a **moderate correlation (0.2826)** between ingredient concentration and cold-weather skincare preferences (2019–2023).
+* **Designed visual analytics tools** to examine:
+
+  * Ingredient effectiveness
+  * Customer segmentation
+  * Demand fluctuations
+    Provided **actionable insights** for targeted marketing and product positioning in **winter skincare campaigns**.
+    
 ---
 
 ## 🎥 Resources
