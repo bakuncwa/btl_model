@@ -1,11 +1,6 @@
 # DATAMIN.md — Final Paper Documentation
 ## Low Performing Product in Sephora Dataset Product Recommendation Model
 
-**Author:** Gabrielle Ysabel Almirol
-**Role:** Chief Technology Officer, Association of Information Management Benilde
-**Contact:** gabrielleysabel.almirol@benilde.edu.ph
-**Event:** Between the Lines: Machine Learning Study Jam — April 4, 2025
-
 ---
 
 ## Figure Index
@@ -718,21 +713,21 @@ ORDER BY purchase_count DESC;
 
 ```mermaid
 flowchart TD
-    A[["Data Source\nKaggle: Sephora Products\nand Skincare Reviews"]]
-    B[["Data Ingestion\nkagglehub.dataset_download\npandas.read_csv\n5 review CSVs + 1 product CSV"]]
-    C[["Spark Session Init\nPySpark 3.5.4\nlocal master"]]
-    D[["Data Cleaning\nNull removal, deduplication\nType coercion, whitespace strip\nBoolean encoding, season tagging"]]
-    E[["Data Union and SQL\nUNION ALL 5 review tables\nSpark SQL TempViews"]]
-    F[["Revenue Analysis\nSUM price_usd GROUP BY product_id\nFilter: YEAR 2020-2023\nIdentify: P442990 = lowest (1.15%)"]]
-    G[["Co-Purchase Mining\nCTE: buyers of P442990\nFind complementary products\nRank by purchase_count"]]
-    H[["Ingredient Extraction\nLATERAL VIEW explode split\nParse size to size_oz and size_mL"]]
-    I[["Concentration Scoring\nMatch ingredients vs. P442990\ntotal_concentration = sum(conc% x size_oz)\n41 ingredient lookup table"]]
-    J[["Target Engineering\nMedian threshold = 0.075\ntarget=1 if above, else 0\nCorrelation: r=0.2826"]]
-    K[["Train/Test Split\ntest_size=0.2, random_state=42\nTrain: 785,853 — Test: 196,464"]]
-    L[["Model Training\nCatBoostClassifier\niterations=500, depth=6\nlearning_rate=0.1, eval_metric=F1"]]
-    M[["Evaluation\nAccuracy: 99.93%\nF1: 99.95%\nPrecision: 99.89%\nRecall: 100.00%"]]
-    N[["Model Serialization\ndill .pkl\nbtl_model_20250320_2034\n_matched-conc_P442990_purchases.pkl"]]
-    O[["API Deployment\nFlask REST API\nProduct Recommendation\nEndpoint"]]
+    A["Data Source<br/>Kaggle: Sephora Products<br/>and Skincare Reviews"]
+    B["Data Ingestion<br/>kagglehub.dataset_download<br/>pandas.read_csv<br/>5 review CSVs + 1 product CSV"]
+    C["Spark Session Init<br/>PySpark 3.5.4<br/>local master"]
+    D["Data Cleaning<br/>Null removal, deduplication<br/>Type coercion, whitespace strip<br/>Boolean encoding, season tagging"]
+    E["Data Union and SQL<br/>UNION ALL 5 review tables<br/>Spark SQL TempViews"]
+    F["Revenue Analysis<br/>SUM price_usd GROUP BY product_id<br/>Filter: YEAR 2020-2023<br/>Identify: P442990 = lowest (1.15%)"]
+    G["Co-Purchase Mining<br/>CTE: buyers of P442990<br/>Find complementary products<br/>Rank by purchase_count"]
+    H["Ingredient Extraction<br/>LATERAL VIEW explode split<br/>Parse size to size_oz and size_mL"]
+    I["Concentration Scoring<br/>Match ingredients vs. P442990<br/>total_concentration = sum(conc% x size_oz)<br/>41 ingredient lookup table"]
+    J["Target Engineering<br/>Median threshold = 0.075<br/>target=1 if above, else 0<br/>Correlation: r=0.2826"]
+    K["Train/Test Split<br/>test_size=0.2, random_state=42<br/>Train: 785,853 — Test: 196,464"]
+    L["Model Training<br/>CatBoostClassifier<br/>iterations=500, depth=6<br/>learning_rate=0.1, eval_metric=F1"]
+    M["Evaluation<br/>Accuracy: 99.93%<br/>F1: 99.95%<br/>Precision: 99.89%<br/>Recall: 100.00%"]
+    N["Model Serialization<br/>dill .pkl<br/>btl_model_20250320_2034<br/>_matched-conc_P442990_purchases.pkl"]
+    O["API Deployment<br/>Flask REST API<br/>Product Recommendation<br/>Endpoint"]
 
     A --> B
     B --> C
@@ -754,17 +749,17 @@ flowchart TD
 
 ```mermaid
 flowchart LR
-    A["Product Ingredient List\n(raw text string)"]
-    B["LATERAL VIEW explode\nsplit(ingredients, ',')"]
-    C["Individual\nIngredient Rows"]
-    D["P442990 Concentration\nLookup Table\n41 ingredients"]
+    A["Product Ingredient List<br/>(raw text string)"]
+    B["LATERAL VIEW explode<br/>split(ingredients, ',')"]
+    C["Individual<br/>Ingredient Rows"]
+    D["P442990 Concentration<br/>Lookup Table<br/>41 ingredients"]
     E["INNER JOIN / TRIM match"]
-    F["Matched Ingredients\nwith conc%"]
-    G["Multiply by size_oz\n(parsed from size field)"]
-    H["SUM per product\n= total_concentration"]
-    I{"total_concentration\n> 0.075 (median)?"}
-    J["target = 1\nHigh Match"]
-    K["target = 0\nLow Match"]
+    F["Matched Ingredients<br/>with conc%"]
+    G["Multiply by size_oz<br/>(parsed from size field)"]
+    H["SUM per product<br/>= total_concentration"]
+    I{"total_concentration<br/>> 0.075 (median)?"}
+    J["target = 1<br/>High Match"]
+    K["target = 0<br/>Low Match"]
 
     A --> B --> C --> E
     D --> E
