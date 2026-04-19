@@ -867,41 +867,41 @@ In the broader context of the global skincare market ($186B TAM, $7B SAM in US p
 
 ## 14. References
 
-Agrawal, R., & Srikant, R. (1994). Fast algorithms for mining association rules. *Proceedings of the 20th International Conference on Very Large Data Bases (VLDB)*, 487–499.
+[1] Agrawal, R., & Srikant, R. (1994). Fast algorithms for mining association rules. *Proceedings of the 20th International Conference on Very Large Data Bases (VLDB)*, 487–499.
 
-Burke, R. (2002). Hybrid recommender systems: Survey and experiments. *User Modeling and User-Adapted Interaction*, *12*(4), 331–370. https://doi.org/10.1023/A:1021240730564
+[2] Burke, R. (2002). Hybrid recommender systems: Survey and experiments. *User Modeling and User-Adapted Interaction*, *12*(4), 331–370. https://doi.org/10.1023/A:1021240730564
 
-Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
+[3] Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
 
-Circana (formerly NPD Group). (2024). *US prestige beauty industry annual report 2023*. Circana Group.
+[4] Circana (formerly NPD Group). (2024). *US prestige beauty industry annual report 2023*. Circana Group.
 
-Dorogush, A. V., Ershov, V., & Gulin, A. (2018). CatBoost: Gradient boosting with categorical features support. *Workshop on Machine Learning Systems (LearningSys) at NeurIPS 2018*. arXiv:1810.11363.
+[5] Dorogush, A. V., Ershov, V., & Gulin, A. (2018). CatBoost: Gradient boosting with categorical features support. *Workshop on Machine Learning Systems (LearningSys) at NeurIPS 2018*. https://arxiv.org/abs/1810.11363
 
-Draelos, Z. D. (2010). *Cosmetic dermatology: Products and procedures*. Wiley-Blackwell.
+[6] Draelos, Z. D. (2010). *Cosmetic dermatology: Products and procedures*. Wiley-Blackwell.
 
-Grand View Research. (2024). *Skincare market size, share & trends analysis report by product, by end-use, by distribution channel, by region, and segment forecasts, 2024–2032*. Grand View Research.
+[7] Grand View Research. (2024). *Clean beauty market size, share & trends analysis report, 2024–2030*. Grand View Research.
 
-Grand View Research. (2024). *Clean beauty market size, share & trends analysis report, 2024–2030*. Grand View Research.
+[8] Grand View Research. (2024). *Skincare market size, share & trends analysis report by product, by end-use, by distribution channel, by region, and segment forecasts, 2024–2032*. Grand View Research.
 
-Jannach, D., Zanker, M., Felfernig, A., & Friedrich, G. (2010). *Recommender systems: An introduction*. Cambridge University Press.
+[9] Jannach, D., Zanker, M., Felfernig, A., & Friedrich, G. (2010). *Recommender systems: An introduction*. Cambridge University Press.
 
-Kunkel, D., & Bhatt, R. (2021). Seasonal variation in skincare product demand: Evidence from e-commerce review data. *Journal of Consumer Research*, *48*(2), 214–232.
+[10] Kunkel, D., & Bhatt, R. (2021). Seasonal variation in skincare product demand: Evidence from e-commerce review data. *Journal of Consumer Research*, *48*(2), 214–232.
 
-McAfee, A., & Brynjolfsson, E. (2012). Big data: The management revolution. *Harvard Business Review*, *90*(10), 60–68.
+[11] McAfee, A., & Brynjolfsson, E. (2012). Big data: The management revolution. *Harvard Business Review*, *90*(10), 60–68.
 
-McKinsey & Company. (2023). *The value of getting personalization right — or wrong — is multiplying*. McKinsey & Company Digital Insights.
+[12] McKinsey & Company. (2023). *The value of getting personalization right — or wrong — is multiplying*. McKinsey & Company Digital Insights.
 
-Mintel Group. (2023). *Beauty and personal care global trends: AI and personalization*. Mintel International.
+[13] Mintel Group. (2023). *Beauty and personal care global trends: AI and personalization*. Mintel International.
 
-Mordor Intelligence. (2024). *Sunscreen market — growth, trends, COVID-19 impact, and forecasts (2024–2032)*. Mordor Intelligence.
+[14] Mordor Intelligence. (2024). *Sunscreen market — growth, trends, COVID-19 impact, and forecasts (2024–2032)*. Mordor Intelligence.
 
-Rawlings, A. V., & Matts, P. J. (2005). Stratum corneum moisturization at the molecular level: An update in relation to the dry skin cycle. *Journal of Investigative Dermatology*, *124*(6), 1099–1110. https://doi.org/10.1111/j.0022-202X.2005.23726.x
+[15] Rawlings, A. V., & Matts, P. J. (2005). Stratum corneum moisturization at the molecular level: An update in relation to the dry skin cycle. *Journal of Investigative Dermatology*, *124*(6), 1099–1110. https://doi.org/10.1111/j.0022-202X.2005.23726.x
 
-Ricci, F., Rokach, L., & Shapira, B. (Eds.). (2011). *Recommender systems handbook*. Springer. https://doi.org/10.1007/978-0-387-85820-3
+[16] Ricci, F., Rokach, L., & Shapira, B. (Eds.). (2011). *Recommender systems handbook*. Springer. https://doi.org/10.1007/978-0-387-85820-3
 
-Smith, B., & Linden, G. (2017). Two decades of recommender systems at Amazon.com. *IEEE Internet Computing*, *21*(3), 12–18. https://doi.org/10.1109/MIC.2017.72
+[17] Smith, B., & Linden, G. (2017). Two decades of recommender systems at Amazon.com. *IEEE Internet Computing*, *21*(3), 12–18. https://doi.org/10.1109/MIC.2017.72
 
-Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. *ACM Computing Surveys*, *52*(1), 1–38. https://doi.org/10.1145/3285029
+[18] Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. *ACM Computing Surveys*, *52*(1), 1–38. https://doi.org/10.1145/3285029
 
 ---
 
@@ -1048,43 +1048,3 @@ with open("../models/btl_model_20250320_2034_matched-conc_P442990_purchases.pkl"
 | Test F1 stabilization | ~Iteration 94 |
 | Final train F1 (iter 499) | 1.0000 |
 | Final test F1 (iter 499) | 0.9988 |
-
----
-
-## References
-
-[1] Agrawal, R., & Srikant, R. (1994). Fast algorithms for mining association rules. *Proceedings of the 20th International Conference on Very Large Data Bases (VLDB)*, 487–499.
-
-[2] Burke, R. (2002). Hybrid recommender systems: Survey and experiments. *User Modeling and User-Adapted Interaction*, *12*(4), 331–370. https://doi.org/10.1023/A:1021240730564
-
-[3] Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining*, 785–794. https://doi.org/10.1145/2939672.2939785
-
-[4] Circana (formerly NPD Group). (2024). *US prestige beauty industry annual report 2023*. Circana Group.
-
-[5] Dorogush, A. V., Ershov, V., & Gulin, A. (2018). CatBoost: Gradient boosting with categorical features support. *Workshop on Machine Learning Systems (LearningSys) at NeurIPS 2018*. https://arxiv.org/abs/1810.11363
-
-[6] Draelos, Z. D. (2010). *Cosmetic dermatology: Products and procedures*. Wiley-Blackwell.
-
-[7] Grand View Research. (2024). *Clean beauty market size, share & trends analysis report, 2024–2030*. Grand View Research.
-
-[8] Grand View Research. (2024). *Skincare market size, share & trends analysis report by product, by end-use, by distribution channel, by region, and segment forecasts, 2024–2032*. Grand View Research.
-
-[9] Jannach, D., Zanker, M., Felfernig, A., & Friedrich, G. (2010). *Recommender systems: An introduction*. Cambridge University Press.
-
-[10] Kunkel, D., & Bhatt, R. (2021). Seasonal variation in skincare product demand: Evidence from e-commerce review data. *Journal of Consumer Research*, *48*(2), 214–232.
-
-[11] McAfee, A., & Brynjolfsson, E. (2012). Big data: The management revolution. *Harvard Business Review*, *90*(10), 60–68.
-
-[12] McKinsey & Company. (2023). *The value of getting personalization right — or wrong — is multiplying*. McKinsey & Company Digital Insights.
-
-[13] Mintel Group. (2023). *Beauty and personal care global trends: AI and personalization*. Mintel International.
-
-[14] Mordor Intelligence. (2024). *Sunscreen market — growth, trends, COVID-19 impact, and forecasts (2024–2032)*. Mordor Intelligence.
-
-[15] Rawlings, A. V., & Matts, P. J. (2005). Stratum corneum moisturization at the molecular level: An update in relation to the dry skin cycle. *Journal of Investigative Dermatology*, *124*(6), 1099–1110. https://doi.org/10.1111/j.0022-202X.2005.23726.x
-
-[16] Ricci, F., Rokach, L., & Shapira, B. (Eds.). (2011). *Recommender systems handbook*. Springer. https://doi.org/10.1007/978-0-387-85820-3
-
-[17] Smith, B., & Linden, G. (2017). Two decades of recommender systems at Amazon.com. *IEEE Internet Computing*, *21*(3), 12–18. https://doi.org/10.1109/MIC.2017.72
-
-[18] Zhang, S., Yao, L., Sun, A., & Tay, Y. (2019). Deep learning based recommender system: A survey and new perspectives. *ACM Computing Surveys*, *52*(1), 1–38. https://doi.org/10.1145/3285029
