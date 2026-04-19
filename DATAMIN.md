@@ -606,6 +606,8 @@ erDiagram
 | Classification | CatBoostClassifier predicts `target` (high/low concentration match) | Binary classification fits the median-threshold target; gradient boosting handles mixed categorical and numeric features natively |
 | Feature Engineering | Ingredient concentration scoring per product | Transforms raw ingredient text into a continuous numeric feature, bridging cosmetic chemistry and customer behavior |
 
+The three techniques form a sequential analytical pipeline rather than isolated methods. Association rule mining via Spark SQL CTE operates on the raw co-purchase graph to surface behavioral affinity signals between P442990 and complementary SKUs, implementing a simplified market basket analysis at distributed scale without the computational overhead of a full Apriori pass over the 982,317-record dataset. The ingredient concentration feature engineering then encodes product-level chemistry into a continuous scalar — `total_concentration = Σ(standard_conc_percentage × size_oz)` across 41 matched ingredients — bridging cosmetic domain knowledge with a model-ready numeric input derived from the same `product_df` ingredient text column. CatBoostClassifier receives this engineered scalar alongside five high-cardinality categorical identifiers (`product_id`, `author_id`, `product_name`, `brand_name`, `submission_time`), leveraging its native ordered target statistics encoding to avoid one-hot expansion artifacts that would otherwise inflate dimensionality across 8,494 distinct products and hundreds of thousands of unique reviewer IDs; the combination of these three techniques produces a feature space that is simultaneously behaviorally grounded, chemically interpretable, and computationally tractable within CatBoost's gradient-boosted tree framework.
+
 ### Association Rule Mining — Co-Purchase SQL CTE
 
 ```sql
@@ -626,12 +628,16 @@ GROUP BY product_id, product_name, brand_name
 ORDER BY purchase_count DESC;
 ```
 
+The CTE is structured as a two-stage graph traversal against the unified `total_reviews_df` Spark SQL view. The first stage — `target_customers` — isolates the distinct buyer cohort for P442990 via a direct equality filter on `product_id`, producing a deduplicated set of `author_id` values that function as the join key for the second stage. `complementary_purchases` performs an inner join between `total_reviews_df` and `target_customers` on `author_id`, excluding the target SKU itself with `product_id != 'P442990'` to isolate all other products purchased by the same reviewer population; the `DISTINCT` clause on `(author_id, product_id, product_name, brand_name)` prevents double-counting cases where a single customer left multiple reviews for the same complementary product across different time periods. The outer aggregation collapses the join result by `(product_id, product_name, brand_name)` and applies `COUNT(*)` as a co-purchase frequency proxy — equivalent to a support-only market basket metric without an explicit confidence threshold — ordered descending to surface the highest-affinity cross-sell candidates, all executed within Spark's distributed shuffle-and-aggregate execution model across the partitioned `total_reviews_df` dataset.
+
 **Top Complementary Products (notebook cell 22):**
 
 | Rank | Product | Brand | Co-Purchases |
 |------|---------|-------|-------------|
 | 1 | Lip Sleeping Mask | LANEIGE | 23 |
 | 2 | Green Clean Makeup Removing Cleansing Balm | Farmacy | 16 |
+
+The co-purchase results reveal a buyer profile oriented toward multi-step, hydration-focused skincare routines rather than UV protection in isolation, which directly contextualizes P442990's chronic underperformance. Customers who purchased the mineral SPF product co-purchased a nighttime occlusive treatment (LANEIGE Lip Sleeping Mask, 23 co-purchases) and a lipid-based cleansing emollient (Farmacy Green Clean Makeup Removing Cleansing Balm, 16 co-purchases), indicating a cold-weather skincare regimen buyer who prioritizes barrier repair and moisture retention across sequential routine steps. The shallow depth of the co-purchase graph — only two products exceed a frequency count above 10 — is a direct artifact of P442990's low absolute purchase volume ($880 total revenue over four years, 2020–2023), which constrains the statistical density of the market basket signal and limits confidence-level association derivation; a higher-volume anchor SKU would propagate a richer co-occurrence matrix with broader cross-category coverage. From a merchandising strategy standpoint, these two complementary products define the bundle positioning recommendation: P442990 should be cross-merchandised alongside occlusive nighttime treatments and lipid-cleansing balms targeting the cold-weather barrier-repair routine segment, where its mineral SPF formulation can serve as the daytime complement to the night and cleanse steps already claimed by LANEIGE and Farmacy within this specific buyer cohort.
 
 ---
 
