@@ -868,7 +868,7 @@ In the broader context of the global skincare market ($186B TAM, $7B SAM in US p
 
 ---
 
-## 14. References
+## References
 
 [1] Agrawal, R., & Srikant, R. (1994). Fast algorithms for mining association rules. *Proceedings of the 20th International Conference on Very Large Data Bases (VLDB)*, 487–499.
 
