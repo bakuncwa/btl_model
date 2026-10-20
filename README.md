@@ -821,12 +821,6 @@ In the broader context of the global skincare market ($186B TAM, $7B SAM in US p
 
 ## Technical Contributions
 
-### Project Description
-
-- Low Performing Product in Sephora Dataset Product Recommendation Model is a machine learning solution developed for the Between the Lines: Machine Learning Study Jam event on April 4, 2025. The model predicts customer purchasing behavior based on ingredient concentration matching with key chemical ingredients in low-performing sales revenue Product P442990 (REN Clean Skincare's Clean Screen Mineral SPF 30 Mattifying Face Sunscreen) and seasonal skincare needs.
-
-### Roles & Responsibilities
-
 - Spearheaded and loaded predictive multiple logistic regression recommendation CatBoostClassifier GBDT model via scikit-learn and pickle for customers’ key ingredients concentration matching with low-performing sales revenue Product P442990 and achieved 99.93% accuracy, 99.95% F1 score, 99.89% precision, and 100% recall over 8k products and 1 million reviews.
 - Refined feature engineering using Apache Spark to optimize moderate correlation (0.2826) between target ingredient concentration and increased demand for humectants and occlusives in winter months from 2019-2023.
 - Strategized key descriptive statistical visualizations utilizing Python libraries ie. seaborn, pandas, matplotlib for customer behavioral analysis and product sales performance.
