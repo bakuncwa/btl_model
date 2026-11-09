@@ -437,7 +437,7 @@ erDiagram
 
     DIM_PRODUCT {
         STRING product_sk PK "Surrogate Key"
-        STRING product_id NK "Natural Key"
+        STRING product_id UK "Natural Key"
         STRING product_name "Product display name"
         STRING primary_category "Top-level category"
         STRING secondary_category "Sub-category"
@@ -456,7 +456,7 @@ erDiagram
 
     DIM_CUSTOMER {
         STRING author_sk PK "Surrogate Key"
-        STRING author_id NK "Natural Key"
+        STRING author_id UK "Natural Key"
         STRING skin_tone "Self-reported skin tone"
         STRING eye_color "Eye color"
         STRING skin_type "oily/dry/combo/normal"
@@ -465,7 +465,7 @@ erDiagram
 
     DIM_TIME {
         INT time_sk PK "Surrogate Key"
-        DATETIME submission_time NK "Natural Key"
+        DATETIME submission_time UK "Natural Key"
         INT year "Submission year"
         INT month "Submission month (1-12)"
         INT quarter "Quarter (1-4)"
@@ -475,7 +475,7 @@ erDiagram
 
     DIM_BRAND {
         STRING brand_sk PK "Surrogate Key"
-        STRING brand_id NK "Natural Key"
+        STRING brand_id UK "Natural Key"
         STRING brand_name "Brand display name"
     }
 
@@ -663,6 +663,7 @@ The co-purchase results reveal a buyer profile oriented toward multi-step, hydra
 ### Figure 1 — ML Pipeline Flowchart
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'step'}}}%%
 flowchart TD
     A["Data Source<br/>Kaggle: Sephora Products<br/>and Skincare Reviews"]
     B["Data Ingestion<br/>kagglehub.dataset_download<br/>pandas.read_csv<br/>5 review CSVs + 1 product CSV"]
@@ -699,6 +700,7 @@ flowchart TD
 ### Figure 7 — Ingredient Concentration Scoring Diagram
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'step'}}}%%
 flowchart LR
     A["Product Ingredient List<br/>(raw text string)"]
     B["LATERAL VIEW explode<br/>split(ingredients, ',')"]
