@@ -417,6 +417,7 @@ Enable performance tracking and seasonal sales analysis of Sephora products, spe
 Crow's foot notation: `||--o{` = one-to-many (zero or more)
 
 ```mermaid
+%%{init: {'theme': 'base', 'flowchart': {'curve': 'step'}, 'themeVariables': {'primaryColor': '#ffffff', 'primaryBorderColor': '#000000', 'primaryTextColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000', 'clusterBkg': '#ffffff', 'clusterBorder': '#000000', 'edgeLabelBackground': '#ffffff', 'attributeBackgroundColorOdd': '#ffffff', 'attributeBackgroundColorEven': '#ffffff'}}}%%
 erDiagram
     FACT_PURCHASES {
         INT purchase_sk PK "Surrogate Key"
@@ -663,7 +664,7 @@ The co-purchase results reveal a buyer profile oriented toward multi-step, hydra
 ### Figure 1 — ML Pipeline Flowchart
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'step'}}}%%
+%%{init: {'theme': 'base', 'flowchart': {'curve': 'step'}, 'themeVariables': {'primaryColor': '#ffffff', 'primaryBorderColor': '#000000', 'primaryTextColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000', 'clusterBkg': '#ffffff', 'clusterBorder': '#000000', 'edgeLabelBackground': '#ffffff', 'attributeBackgroundColorOdd': '#ffffff', 'attributeBackgroundColorEven': '#ffffff'}}}%%
 flowchart TD
     A["Data Source<br/>Kaggle: Sephora Products<br/>and Skincare Reviews"]
     B["Data Ingestion<br/>kagglehub.dataset_download<br/>pandas.read_csv<br/>5 review CSVs + 1 product CSV"]
@@ -700,7 +701,7 @@ flowchart TD
 ### Figure 7 — Ingredient Concentration Scoring Diagram
 
 ```mermaid
-%%{init: {'flowchart': {'curve': 'step'}}}%%
+%%{init: {'theme': 'base', 'flowchart': {'curve': 'step'}, 'themeVariables': {'primaryColor': '#ffffff', 'primaryBorderColor': '#000000', 'primaryTextColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'nodeBorder': '#000000', 'clusterBkg': '#ffffff', 'clusterBorder': '#000000', 'edgeLabelBackground': '#ffffff', 'attributeBackgroundColorOdd': '#ffffff', 'attributeBackgroundColorEven': '#ffffff'}}}%%
 flowchart LR
     A["Product Ingredient List<br/>(raw text string)"]
     B["LATERAL VIEW explode<br/>split(ingredients, ',')"]
